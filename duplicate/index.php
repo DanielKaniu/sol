@@ -39,6 +39,7 @@ $string = $_REQUEST['string'];
 //                echo json_encode(str_split($string));
                 $exploded = explode(" ", $string);
 //                echo $exploded[0];
+                
                 var_dump(array_unique($exploded));
                 //
                 //
