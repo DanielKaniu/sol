@@ -7,7 +7,7 @@ $legible = $_REQUEST['existing_loan'];
 ?>
 <html>
     <head>
-        <title>Fizz | Buzz</title>
+        <title>Mkulima Co-operative Sacco</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- 
