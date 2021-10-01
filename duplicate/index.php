@@ -35,25 +35,11 @@ $string = $_REQUEST['string'];
             Display the results here. -->
             <?php
                 //
-                //
-//                echo json_encode(str_split($string));
+                //Split the user input into word strings.
                 $exploded = explode(" ", $string);
-//                echo $exploded[0];
-                
-                var_dump(array_unique($exploded));
                 //
-                //
-//                $myString = "9,admin@example.com,8";
-//                $myArray = explode(',', $myString);
-//                print_r($myArray);
-//
-//
-//
-//                // Example 1
-//                $pizza  = "piece1 piece2 piece3 piece4 piece5 piece6";
-//                $pieces = explode(" ", $pizza);
-//                echo $pieces[0]; // piece1
-//                echo $pieces[1]; // piece2
+                //Get the duplicate values of a user's input; case sensitive.
+                echo json_encode(array_intersect($exploded, array_unique(array_diff_key($exploded, array_unique($exploded)))));
             ?>
         </div>
     </body>

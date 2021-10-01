@@ -31,38 +31,37 @@ $legible = $_REQUEST['existing_loan'];
                 Check loan eligibility -->
                 <div>
                     Do you have an existing loan with Mkulima Co-operative?
-                <div/>
-                <!--
-                Confirm if user has existing loan or not -->
-                <input type="radio" id="yes" name="existing_loan" value="yes">
-                <label for="yes">Yes<label/>
-                <input type="radio" id="no" name="existing_loan" value="no">
-                <label for="no">No<label/>
-                <br>
-                <!--
-                Post the results. -->
-                <input type="submit" value="Check loan elligibility"/>
-            </form>
-            <div id="results">
-                <!--
-                Display the results here. -->
-                <?php
-                    //
-                    //
-                   if($salary > 30000 && $years >= 2 && $legible === "no"){
-                       //
-                       //
-                       echo "Eligible";
-                   }
-                   else{
-                       //
-                       //
-                       echo "<br>"."<br>";
-                       echo "Not Eligible";
-                   }
-                ?>
-            </div>
+                    <div/>
+                    <!--
+                    Confirm if user has existing loan or not -->
+                    <input type="radio" id="yes" name="existing_loan" value="yes">
+                    <label for="yes">Yes<label/>
+                        <input type="radio" id="no" name="existing_loan" value="no">
+                        <label for="no">No<label/>
+                            <br>
+                            <!--
+                            Post the results. -->
+                            <input type="submit" value="Check loan elligibility"/>
+                            </form>
+                            <div id="results">
+                                <!--
+                                Display the results here. -->
+                                <?php
+                                //
+                                //Check the eligibility of a user to get a loan.
+                                if ($salary > 30000 && $years >= 2 && $legible === "no") {
+                                    //
+                                    //Display a positive message.
+                                    echo "Eligible";
+                                } else {
+                                    //
+                                    //Display a negative message.
+                                    echo "<br>" . "<br>";
+                                    echo "Not Eligible";
+                                }
+                                ?>
+                            </div>
 
-        </div>
-    </body>
-</html>
+                            </div>
+                            </body>
+                            </html>

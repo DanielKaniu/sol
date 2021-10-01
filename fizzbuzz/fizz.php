@@ -42,23 +42,29 @@ $input = $_REQUEST['input'];
 //Create a condition to help in displaying the results.
 if ($input >=1 && $input <= 100) {
     //
-    //
+    //Do this if the input is a multiple of both 3 and 5.
     if ($input % 3 == 0 && $input % 5 == 0) {
         //
         //
         echo "fizzbuzz";
-    } elseif ($input % 5 == 0) {
+    }
+    //
+    //Do this is the input is only a multiple of 5.
+    elseif ($input % 5 == 0) {
         //
         //
         echo "buzz";
-    } elseif ($input % 3 == 0) {
+    }
+    //
+    //Do this is the input is only a multiple of 3.
+    elseif ($input % 3 == 0) {
         //
         //
         echo "fizz";
     } else {
         //
         //
-        echo "not applicable";
+        echo "N/A";
     }
 } else {
     //
